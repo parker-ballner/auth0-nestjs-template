@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "types": ["node", "jest"],
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2017",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["src", "src/migrations/1618546762736-init.ts"],
+  "exclude": ["node_modules", "**/*.spec.ts", "src/migrations"]
+}
