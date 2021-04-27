@@ -14,6 +14,7 @@ import { Public } from 'src/middleware/auth/public'
 import { CreateUserDto, UpdateUserDto, UserDto } from './dto'
 import { UserService } from './services'
 import { Token } from 'src/controller'
+import User from 'src/entities/user'
 
 @Controller('/user')
 export class UserController {
@@ -21,8 +22,10 @@ export class UserController {
 
   @Get('/:id')
   async Get(
+    @Req() { user }: { user: User },
     @Param('id', new ParseUUIDPipe({ version: '4' })) id: string,
   ): Promise<UserDto> {
+    if (user.id === id) return new UserDto(user)
     return new UserDto(await this.userService.get(id))
   }
 
