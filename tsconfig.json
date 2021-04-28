@@ -15,6 +15,6 @@
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "src/migrations/1618546762736-init.ts"],
+  "include": ["src"],
   "exclude": ["node_modules", "**/*.spec.ts", "src/migrations"]
 }
